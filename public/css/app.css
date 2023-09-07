@@ -21,9 +21,17 @@
  }
 
  h1 {
-   text-align: center;
-   margin-bottom: 100px;
+    text-align: center;
+    /*margin-bottom: 100px;*/
+    /*width: auto;*/
+    position: fixed;
  }
+
+ .error {
+    font-size: 25px;
+    margin-top: 150px;
+ }
+
 
 .email {
    font-size: 28px;

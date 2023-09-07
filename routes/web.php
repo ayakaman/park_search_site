@@ -17,4 +17,6 @@ use App\Http\Controllers\AuthController;
 
 //top画面
 Route::get('/', [AuthController::class, 'index']);
+Route::post('/login', [AuthController::class, 'login']);
+Route::get('/park_search/top', [TaskController::class, 'top']);
 

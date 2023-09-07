@@ -1,7 +1,93 @@
+.toplogin {
+  position: relative;
+  width: auto;
+}
+
 .img {
-  width: 100%;
-  height: 800px;
-  background-image: url(../images/top.jpg);
-  background-position: bottom;
-  background-size: cover;
+   width: 100%;
+   height: 800px;
+   background-image: url(../images/top.jpg);
+   background-position: bottom;
+   background-size: cover;
+   opacity: 0.8;
  }
+
+.login {
+   position: absolute;
+   color: white;
+   top: 10%;
+   left: 38%;
+   font-size: 2em;
+ }
+
+ h1 {
+   text-align: center;
+   margin-bottom: 100px;
+ }
+
+.email {
+   font-size: 28px;
+   border-radius: 10px;
+   padding: 5px;
+   border: 10px;
+   opacity: 0.8;
+   margin-bottom: 50px;
+ }
+
+.pass {
+   font-size: 28px;
+   border-radius: 10px;
+   padding: 5px;
+   border: 10px;
+   opacity: 0.8;
+   margin-bottom: 30px;
+}
+
+
+ /*ボタン共通設定*/
+ .btn{
+   position: relative;
+   overflow: hidden;
+   text-decoration: none;
+   display: inline-block;
+   border: 1px solid #555;
+   padding: 10px 30px;
+   text-align: center;
+   outline: none;
+   transition: ease .2s;
+   transform: translate(50%,100%);
+   font-family: 'arial black';
+   font-size: 20px;
+}
+
+/*spanの形状*/
+.btn span {
+   position: relative;
+   z-index: 3;
+   color:#333;
+}
+
+.btn:hover span{
+   color:#fff;
+}
+
+/*背景（左→右へ）*/
+.bgleft:before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 2;
+   background:#333;
+   width: 100%;
+   height: 100%;
+   transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+   transform: scale(0, 1);
+   transform-origin: right top;
+}
+
+/*hoverした時の形状*/
+.bgleft:hover:before{
+   transform-origin:left top;
+   transform:scale(1, 1);
+}

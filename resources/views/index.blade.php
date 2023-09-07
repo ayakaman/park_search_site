@@ -7,13 +7,16 @@
         <link rel="stylesheet" type="text/css" href="css/app.css">
     </head>
     <body>
-      <div class='img'>
-      </div>
-        <h1>ログイン</h1>
-        <form action="/login" method="post">
-            email：<input name="email"><br>
-            パスワード：<input  name="password" type="password"><br>
-            <button>ログインする</button>
-        </form>
+        <main class='toplogin'>
+          <div class='img'></div>
+          <div class='login'>
+              <h1>Login</h1>
+              <form action="/login" method="post">
+                  <input class='email' name="email" placeholder="email"><br>
+                  <input class='pass'  name="password" type="password" placeholder="password"><br>
+                  <button class='btn bgleft'><span>  L o g i n  </span></button>
+              </form>
+          </div>
+        </main>
     </body>
 </html>

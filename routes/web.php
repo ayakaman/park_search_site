@@ -15,6 +15,6 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-//タスク管理システム
+//top画面
 Route::get('/', [AuthController::class, 'index']);
 

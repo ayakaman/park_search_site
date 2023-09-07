@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\LoginPostRequest;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -26,8 +27,17 @@ class AuthController extends Controller
 
         // データの取得
         $datum = $request->validated();
+        //var_dump($datum); exit;
+
+        // 認証
+        if (Auth::attempt($datum) === false) {
+            return back()
+                   ->withInput()
+                   ;
+        }
 
         //
-        var_dump($datum); exit;
+        $request->session()->regenerate();
+        return redirect()->intended('/park_search/top');
     }
 }

@@ -19,5 +19,14 @@ use App\Http\Controllers\SearchController;
 //top画面
 Route::get('/', [AuthController::class, 'index']);
 Route::post('/login', [AuthController::class, 'login']);
-Route::get('/park_search/top', [SearchController::class, 'top']);
 
+//認可処理
+Route::middleware(['auth'])->group(function () {
+  Route::prefix('/park_search')->group(function () {
+    Route::get('/top', [SearchController::class, 'top']);
+    Route::get('/entry', [SearchController::class, 'entry']);
+    //Route::post('/register', [SearchController::class, 'register']);
+
+  });
+
+});

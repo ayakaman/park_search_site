@@ -1,7 +1,13 @@
-@extends('layout')
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>公園検索サイト</title>
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+    </head>
+    <body>
 
-{{-- メインコンテンツ --}}
-@section('contets')
         <main class='toplogin'>
           <div class='img'></div>
           <div class='login'>
@@ -19,8 +25,11 @@
                   @csrf
                   <input class='email' name="email" placeholder="email" value="{{ old('email') }}"><br>
                   <input class='pass'  name="password" type="password" placeholder="password"><br>
-                  <button class='btn bgleft'><span>  L o g i n  </span></button>
+                  <button class='btn bgleft'><span> L o g i n </span></button><br>
+                  <br>
+                  <button class='btn bgleft'><span>Loginしないで使う</span></button>
               </form>
           </div>
         </main>
-@endsection
+    </body>
+</html>
